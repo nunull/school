@@ -543,10 +543,280 @@ F(x) = {1 \over 4} x^4 - {1 \over 2} x^2 + c
 $$$$
 A = \int_{-1}^1 {x^3 - x \mathrm{d}x}
 $$$$
-A = [{1 \over 4} x^4 - {1 \over 2} x^2 + c]_{-1}^1$$$$
+A = [{1 \over 4} x^4 - {1 \over 2} x^2 + c]_{-1}^1
+$$$$
 A = {1 \over 4} 1^4 - {1 \over 2} 1^2 + c - {({1 \over 4} (-1)^4 - {1 \over 2} (-1)^2 + c)}
 $$$$
 A = 0
 $$
 
 **Begriff:** orientierter Flächeninhalt (positiv wie negativ)
+
+---
+
+**16.07.2014**
+
+---
+
+**17.07.2014**
+
+# Klausurbesprechung: Analytische Geometrie / lineare Algebra (26.06.2014)
+
+## Aufgabe 1
+
+### a)
+
+$$
+g_p: \vec{x} = \lambda
+\begin{pmatrix}
+  24 \\
+  28 \\
+  6
+\end{pmatrix}
+$$
+
+z.Z. $g_p$ und $g_w$ windschief
+
+* weder parallel
+* noch Schnittpunkt
+
+#### Schnittpunkt?
+
+$$
+g_w: \vec{x} = 
+\begin{pmatrix}
+  20 \\
+  20 \\
+  5
+\end{pmatrix} + t
+\begin{pmatrix}
+  {-1} \\
+  2 \\
+  1
+\end{pmatrix}
+$$
+
+#### Gleichsetzen:
+
+$$
+\text{I   | } 20 - t = 24 \lambda
+$$$$
+\text{II  | } 20 + 2t = 18 \lambda
+$$$$
+\text{III | } 5 + t = 6 \lambda
+$$$$
+25 = 39 \lambda
+$$$$
+\lambda = {25 \over 30} = {5 \over 6}
+$$$$
+\text{in II } 20 + 2 t = 18 \cdot {5 \over 6} = {{18 \cdot 5} \over {6}} = 15
+$$$$
+20 + 2 t = 15
+$$$$
+2 t = -5
+$$$$
+t = - {5 \over 2}
+$$$$
+\text{t und } \lambda \text{ in I } 20 - (- {5 \over 2}) =? 24 {5 \over 6}
+$$$$
+20 + {5 \over 2} =! {{24 \cdot 5} \over {6}} = 20
+$$
+
+### b)
+
+#### gesucht:
+
+$$
+E_p \text{ in Koordinatenform}
+$$$$
+E_p: \vec{x} =
+\begin{pmatrix}
+  0 \\
+  0 \\
+  0
+\end{pmatrix} + \lambda
+\begin{pmatrix}
+  24 \\
+  18 \\
+  6
+\end{pmatrix} + \mu
+\begin{pmatrix}
+  {-1} \\
+  2 \\
+  1
+\end{pmatrix}
+$$$$
+\begin{pmatrix}
+  24 \\
+  18 \\
+  6
+\end{pmatrix} x
+\begin{pmatrix}
+  {-1} \\
+  2 \\
+  1
+\end{pmatrix} =
+\begin{pmatrix}
+  6 \\
+  {-30} \\
+  66
+\end{pmatrix} =
+\begin{pmatrix}
+  1 \\
+  {-5} \\
+  11
+\end{pmatrix}
+$$$$
+\vec{n} = 
+\begin{pmatrix}
+  1 \\
+  {-5} \\
+  11
+\end{pmatrix} =
+{{\begin{pmatrix}
+  24 \\
+  18 \\
+  6
+\end{pmatrix} x
+\begin{pmatrix}
+  {-1} \\
+  2 \\
+  1
+\end{pmatrix}} \over 6}
+$$$$
+E_p: x_1 - 5 x_2 + 11 x_3 = \vec{n} \cdot \vec{s_0} = 0
+$$
+
+#### Abstand
+
+$$
+P =
+\begin{pmatrix}
+  20 \\
+  20 \\
+  5
+\end{pmatrix}
+$$$$
+A =
+\begin{pmatrix}
+  0 \\
+  0 \\
+  0
+\end{pmatrix}
+$$$$
+\vec{AP} =
+\begin{pmatrix}
+  {-20} \\
+  {-20} \\
+  {-5}
+\end{pmatrix} \quad \text{Vektor von P in die Ebene}
+$$$$
+d = | \vec{AP} \cdot \vec{n_0} |
+$$$$
+d = |
+\begin{pmatrix}
+  {-20} \\
+  {-20} \\
+  {-5}
+\end{pmatrix} \cdot
+{\begin{pmatrix}
+  1 \\
+  {-5} \\
+  11
+\end{pmatrix} \over \sqrt{147}} |
+$$$$
+d \approx 2,06 LE
+$$
+
+## Aufgabe 2
+
+### a)
+
+(Übergangsdiagramm)
+
+$$
+M =
+\begin{pmatrix}
+  0,7 & 0,1 \\
+  0,3 & 0,9
+\end{pmatrix}
+$$$$
+v_1 = M \cdot v_0
+$$$$
+v_1 =
+\begin{pmatrix}
+  0,7 & 0,1 \\
+  0,3 & 0,9
+\end{pmatrix} \cdot
+\begin{pmatrix}
+  300 \\
+  300
+\end{pmatrix} =
+\begin{pmatrix}
+  240 \\
+  360
+\end{pmatrix}
+$$
+
+### b)
+
+$$
+v_2 = M \cdot v_1 = 
+\begin{pmatrix}
+  204 \\
+  396
+\end{pmatrix}
+$$$$
+v_3 = M \cdot v_2 =
+\begin{pmatrix}
+  182,4 \\
+  417,6
+\end{pmatrix}
+$$
+
+### c)
+
+$$
+\begin{pmatrix}
+  a & b \\
+  c & d
+\end{pmatrix} \cdot
+\begin{pmatrix}
+  240 \\
+  360
+\end{pmatrix} =
+\begin{pmatrix}
+  240 \\
+  360
+\end{pmatrix}
+$$$$
+\text{I   | } 240 a + 360 b = 240
+$$$$
+\text{II  | } 240 c + 360 d = 360
+$$$$
+\text{III | } a + c = 1
+$$$$
+\text{IV  | } b + d = 1
+$$
+
+$$
+\text{I   | } 2 a + 3 b = 2
+$$$$
+\text{II  | } 2 c + 3 d = 3
+$$$$
+\text{III | } a + c = 1
+$$$$
+\text{IV  | } b + d = 1
+$$$$
+a = 1 - c
+$$$$
+b = 1 - d
+$$$$
+2 (1 - c) + 3 (1 - d) = 2
+$$$$
+2 c + 3 d = 3
+$$$$
+a = {{3 d - 1} \over 2}
+$$$$
+c = {{3 - 3 d} \over 2}
+$$
