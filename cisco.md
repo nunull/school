@@ -68,6 +68,49 @@
 
 # 6 Yunus
 
+# 6 VLSM and CIDR
+
+* vlsm variable length subnet masing (für classles)
+* private netze und vlsm-> mehr hosts möglich
+* Netzklassen Prinzip: 0 /8, 10 /16, 110 /24, 1110, 1111
+	* A (0xxx.xxxx.xxxx.xxxx) **0**.0.0.0 - **127**.255.255.255) /8
+	* B (10xx.xxxx.xxxx.xxxx **128.0.0.0 - **191**.255.255.255) /16
+	* C (110xx.xxxx.xxxx.xxxx **192**.0.0.0 - **223**.255.255.255) /24
+	* Multicast (1110.xxxx.xxxx.xxxx **224**.0.0.0 - **239**.255.255.255)
+	* Experimental (1111.xxxx.xxxx.xxxx **240**.0.0.0 - 255.255.255.255)
+	* maske ur für classful relevant
+* summarize beispiel:
+	* 172.16.0.0/16 | 172.17.0.0/16 | 172.18.0.0/16 | 172.19.0.0/16
+	* => 172.16.0.0/14, 2 bits benötigz um von .16 zu .19 zu kommen
+* CIDR = summarization
+* CIDR ignoriert die vorgaben der Netzklassen
+
+![1](img/subnetting.png)
+
+
+
+
+
+# 8 Routing Table: A Closer Look
+
+* show ip route -> directly connected, static, dynamic router added/deleted from routing table, jetzt wirds genauer
+* cisco routing table ist classful vom design (s. Level 1,2)
+* Routen haben level
+	* Level 1: Maske gleich oder kleiner als Netzklassenmaske (in netz A /1-/8, in B /1-/16, ..)
+		* entweder Default Route (static route mit IP 0.0.0.0)
+		* oder Supernet route (route mit maske kleiner (also auch ungleich) der netzklassenmaske
+		* oder Network route (route mit gleicher maske wie Netzklasse)
+		* und parent route (s. bild 2, zeile über child route), wenn subnetz iner classful(d.h. maske größer Netzmaske erstellt wird wird diese automatisch miterstellt. Dient nur zum zeigen, dass Level 2-routen folgen.
+* Level 2: Subnet des classful (d.h. maske gröer netzmaske)
+	* child route (s. bild 2)
+* levelunabhängig
+	* Ultimate Route: next-hop ist ein interface oder eine IP
+* steht beim parent in der table **variable** subnetted besitzen die childs verschiedene Masken
+![2.1](ultimate-parent-child1.png)
+![2.2](ultimate-parent-child2.png)
+
+# 8.2.1 GEHTS WEITER
+
 # 7 Leo
 
 # 8 Yunus
