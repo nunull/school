@@ -87,11 +87,6 @@
 
 ![1](cisco/subnetting.png)
 
-* beste übereinstimmung (ip's) bedeutet längste übereinstimmung
-* ist das exit interface eine IP, wird ein rekursives lookup durchgeführt
-* um netze mit verschiedenen masken auch classful zu realisieren: static/default routes
-* bei calssful behavior (behavior != protocol; behavior ist "globbal setting: `ip classless`") wird die default route nicht immer genommen: wenn eine parent route passt(bedingung einfach), aber keine child route(genaue bedingung) wird die default route nicht genommen, da die parent route "passt" --> drop
-* bei classless behavior nimmt er wenn er kein passendes child hat doch eine supernet oder eine default route
 
 
 # 8 Routing Table: A Closer Look
@@ -109,10 +104,19 @@
 * levelunabhängig
 	* Ultimate Route: next-hop ist ein interface oder eine IP
 * steht beim parent in der table **variable** subnetted besitzen die childs verschiedene Masken
+
+
 ![2.1](cisco/ultimate-parent-child1.png)
 ![2.2](cisco/ultimate-parent-child2.png)
 
 
+
+
+* beste übereinstimmung (ip's) bedeutet längste übereinstimmung
+* ist das exit interface eine IP, wird ein rekursives lookup durchgeführt
+* um netze mit verschiedenen masken auch classful zu realisieren: static/default routes
+* bei calssful behavior (behavior != protocol; behavior ist "globbal setting: `ip classless`") wird die default route nicht immer genommen: wenn eine parent route passt(bedingung einfach), aber keine child route(genaue bedingung) wird die default route nicht genommen, da die parent route "passt" --> drop
+* bei classless behavior nimmt er wenn er kein passendes child hat doch eine supernet oder eine default route
 
 # 7 Leo
 
