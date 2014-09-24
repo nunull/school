@@ -6,4 +6,4 @@ Compilation
 
 Currently compiled using [pandoc](http://johnmacfarlane.net/pandoc/).
 
-    $ pandoc -o mathe.pdf mathe.md
+    $ pandoc -o compiled/"$1".pdf --latex-engine=xelatex --toc "$1" 
