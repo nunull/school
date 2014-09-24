@@ -424,7 +424,7 @@ $$
 
 ### Beweis
 
-[Tafelbild](mathe/2014-07-09-tafel-1.jpg)
+[Tafelbild](res/mathe/2014-07-09-tafel-1.jpg)
 
 $$
 I_a'(x) = {\lim_{h \to 0} {I_a(x+h) - I_a(x) \over h}}
@@ -452,13 +452,13 @@ wobei für h gegen 0 dann z gegen x läuft und f(z) gegen f(x).
 
 ### Aufgabe 224/2
 
-[Tafelbild](mathe/2014-07-09-tafel-2.jpg)
+[Tafelbild](res/mathe/2014-07-09-tafel-2.jpg)
 
 ### Aufgabe 242/5
 
-![Tafelbild](mathe/2014-07-09-aufgabe-1.jpg)
+![Tafelbild](res/mathe/2014-07-09-aufgabe-1.jpg)
 
-![Tafelbild](mathe/2014-07-09-aufgabe-2.jpg)
+![Tafelbild](res/mathe/2014-07-09-aufgabe-2.jpg)
 
 ## Stammfunktion
 
@@ -505,7 +505,7 @@ $$
 $$
 f(t) = 2t - 4
 $$$$
-I_0 = t^2 - 4 t
+I_0(t) = t^2 - 4 t
 $$
 
 #### b)
@@ -513,7 +513,7 @@ $$
 $$
 f(t) = 60 t + 200
 $$$$
-I_0 = 30 t^2 + 200 t
+I_0(t) = 30 t^2 + 200 t
 $$
 
 #### c)
@@ -521,7 +521,7 @@ $$
 $$
 f(t) = 3 t^2
 $$$$
-I_0 = t^3
+I_0(t) = t^3
 $$
 
 #### d)
@@ -529,7 +529,7 @@ $$
 $$
 f(t) = 4 t^3
 $$$$
-I_0 = t^4
+I_0(t) = t^4
 $$
 
 ### Aufgabe
@@ -543,7 +543,7 @@ F(x) = {1 \over 4} x^4 - {1 \over 2} x^2 + c
 $$$$
 A = \int_{-1}^1 {x^3 - x \mathrm{d}x}
 $$$$
-A = [{1 \over 4} x^4 - {1 \over 2} x^2 + c]_{-1}^1
+A = [{1 \over 4} x^4 - {1 \over 2} x^2 + c]_{-1}^1 \quad \text{(Schreibweise für Bereich)}
 $$$$
 A = {1 \over 4} 1^4 - {1 \over 2} 1^2 + c - {({1 \over 4} (-1)^4 - {1 \over 2} (-1)^2 + c)}
 $$$$
@@ -820,3 +820,139 @@ a = {{3 d - 1} \over 2}
 $$$$
 c = {{3 - 3 d} \over 2}
 $$
+
+---
+
+**22.07.2014**
+
+# Wiederholung vom 10.07.2014
+
+## Aufgabe 242/5
+
+## Stammfunktion
+
+## Aufgabe 242/6
+
+---
+
+# Aufgabe 245/5
+
+Geben Sie eine Stammfunktion zu der gegebenen Funktion an.
+
+## a)
+
+$$
+f(x) = 3 x^2
+$$$$
+I_0(x) = x^3
+$$
+
+## b)
+
+$$
+g(x) = - {1 \over 2} x^3
+$$$$
+I_0(x) = - {1 \over 8} x^4
+$$
+
+## c)
+
+$$
+h(t) = a^2 \cdot t^2
+$$$$
+I_0(t) = {{1 \over 3} a^2} \cdot t^3
+$$
+
+## d)
+
+$$
+k(t) = - \sin{t}
+$$$$
+I_0(t) = \cos{t}
+$$
+
+# Aufgabe 245/6
+
+Geben Sie eine Stammfunktion an.
+
+## a)
+
+$$
+f(x) = 1 - x^2 + x^4 - x^6
+$$$$
+I_0(x) = x - {2 \over 3} x^3 + {4 \over 5} x^5 - {6 \over 7} x^7
+$$
+
+## b)
+
+$$
+g(x) = {1 \over {x^2}} + \sqrt{2} \cdot x^2
+$$$$
+I_0(x) = {1 \over {{2 \over 3} x^3}} + {{\sqrt{2}} \over 3} x^3
+$$
+
+## c)
+
+$$
+h(a) = k \cdot \sqrt{a}
+$$$$
+h(a) = k \cdot a^{1 \over 2}
+$$$$
+I_0(a) = {1 \over 3} a^{3 \over 2}
+$$
+
+## d)
+
+$$
+k(x) = x^{c - 1} + 2 x^{c-2} - x^c
+$$$$
+I_0(x) = {1 \over c} x^c + {2 \over {c-1}} x^{c-1} - {1 \over {c+1}} x^{c+1}
+$$
+
+## e)
+
+$$
+y_1(x) = 2 \sin{x} - 3 \cos{x}
+$$$$
+I_0(x) = - 2 cos{x} - 3 \sin{x}
+$$
+
+## f)
+
+$$
+p(t) = k \cdot {1 \over {\sqrt{t}}} - \sqrt{1}
+$$$$
+p(t) = k \cdot t \cdot {1 \over { {1 \over 3} t^{3 \over 2} } } - {1 \over {\sqrt{1}+1}} a^{\sqrt{1}+1}
+$$
+
+# Aufgabe 246/10
+
+---
+
+**22.07.2014**
+
+# Bestimmtes Integral
+
+Sei $F(x)$ eine Stammfunktion von $f(x)$, so ist $\int_a^b {f(x)} = [F(x)]_a^b = F(b) - F(a)$ das bestimmte Integral über $f(x)$.
+
+# Unbestimmtes Integral
+
+Sei $F(x)$ eine Stammfunktion von $f(x)$, so ist $\int {f(x) \mathrm{d}x} = F(x) + c, c \in \mathbb{R}$ das unbestimmte Integral von $f(x)$.
+
+# Satz: Faktorregel für Integrale
+
+$$
+\int_a^b {k \cdot f(x) \mathrm{d}x} = k \cdot \int_a^b {f(x) \mathrm{d}x}
+$$
+
+# Satz: Summenregel für Integrale
+
+$$
+\int_a^b {(f(x) + g(x)) \mathrm{d}x} = \int_a^b {f(x) \mathrm{d}x} + \int_a^b {g(x) \mathrm{d}x}
+$$
+
+# Satz: Allgemeine Intervaladditivität
+
+Sei $a$, $b$, $c$ beliebig: $\int_a^b {f(x) \mathrm{d}x} + \int_b^c {f(x) \mathrm{d}x} = \int_a^c {f(x) \mathrm{d}x}$
+
+# 249/5

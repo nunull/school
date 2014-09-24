@@ -85,7 +85,7 @@
 * CIDR = summarization
 * CIDR ignoriert die vorgaben der Netzklassen
 
-![1](cisco/subnetting.png)
+![1](res/cisco/subnetting.png)
 
 
 
@@ -106,8 +106,8 @@
 * levelunabhängig
 	* Ultimate Route: next-hop ist ein interface oder eine IP
 * steht beim parent in der table **variable** subnetted besitzen die childs verschiedene Masken
-![2.1](cisco/ultimate-parent-child1.png)
-![2.2](cisco/ultimate-parent-child2.png)
+![2.1](res/cisco/ultimate-parent-child1.png)
+![2.2](res/cisco/ultimate-parent-child2.png)
 
 # 8.2.1 GEHTS WEITER
 
