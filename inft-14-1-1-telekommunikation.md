@@ -51,6 +51,8 @@
 | 160 kbit/s Übertragungsrate | intern: B+D-Kanäle entsprechend der|
 | | TK-Anlage |
 
+
+
 | **Primärmultiplexanschluss** |
 |-|
 | **Anlagenanschluss** |
@@ -148,3 +150,17 @@ Ja, allerdings mit einem *Terminaladapter* (*TA*; *A/B-Wandler*)
 *An welcher Stelle erfolgt die Analog- / Digitalumsetzung der Signale, wenn bei einem ISDN-Basisanschluss analoge Telefone eingesetzt werden?*
 
 Die Analog- / Digitalumsetz erfolgt zwischen *UAE-Dose* (*S0-Bus*) und analogem Gerät im *A/B-Wandler* (*Terminaladapter*; *TA*).
+
+----
+
+**24.09.2014**
+
+[](res/inft/2014-09-25-skizze-01.png)
+
+(fehlt)
+
+----
+
+**25.09.2014**
+
+
