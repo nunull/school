@@ -155,12 +155,138 @@ Die Analog- / Digitalumsetz erfolgt zwischen *UAE-Dose* (*S0-Bus*) und analogem 
 
 **24.09.2014**
 
-[](res/inft/2014-09-25-skizze-01.png)
+(fehlt; nachtragen!)
 
-(fehlt)
+Siehe Skizze 1
 
 ----
 
 **25.09.2014**
 
+## DSL-Anschluss
 
+Siehe Skizze 2
+
+Die DSL-Technik ermöglicht eine  schnelle digitale Datenübertragung auf herkömmlichen Kupferleitungen. Höhere Datenraten werden durch einen höheren Frequenzbereich (DSL: 1,1 MHz / ISDN: 120 kHz) erreicht.
+
+* Die eigenen Frequenzbereiche von DSL und ISDN ermöglichen, dass beide parallel auf **einer** Leitung übertragen werden können.
+* DSL-Splitter zerlegen bzw. trennen als Frequenzweiche das Signal in DSL- und ISDN-Datenströme und leiten jedes an die Endgeräte (DSL-Modem bzw. ISDN-NTBA) weiter.
+
+----
+
+**26.09.2014**
+
+## Nachtrag zum NTBA bzw. $U_{k0}$ und $S_0$
+
+### 1) Kanalcodierung der $U_{k0}$-Schnittstelle
+
+* *4B/3T*-Code oder auch *MMS43*-Code
+* für Übertragung auf TN-Aschlussleitung $U_{k0}$
+* Datenstrom wird in 4-Bit-Blöcke (*4B*) aufgeteilt.
+* jeder Block wird in ein 3-Schritt-Tenärsignal (*3T*) umgewandelt.
+* 4B/3T_code hat vier verschiedene Alphabete (Status 1-4), Auswahl des Folgestatus hängt von gerade vorher codierten 3T-Wort ab.
+
+### 2) Kanalcodierung der $S_0$-Schnittstelle
+
+* Sende- und Empfangsrichtung sind durch 4-Drahtbetrieb voneinander getrennt
+* Es kommt ein *modifizierter AMI-Code* zum Einsatz, dabei werden "0"-Bits als Impuls, "1"-Bits als Impulslücke übertragen
+
+#### Beispiel AMI
+
+	Info:       0 1 0 0 1 1 0 0 0 1
+	AMI-Signal: - 0 + - 0 0 + - + 0 (modifizierter AMI-Code)
+
+(`0`-Bits werden als Impuls, `1`-Bits als Impulslücke übertragen.)
+
+## Hausaufgabe bis zum 30.10.2014 (PCM)
+
+### Aufgabe 1
+
+*Was ist die wesentliche Aufgabe der PCM-Technik? Erkläre.*
+
+* (Umsetzung eines zeit- und wertkontinuirlichen Analogsignals als zeit- und wertdiskretes Digitalsignal)
+* Übertragung von Signalen über weite Strecken
+* durch Zeitmultiplexen eine Übertragungsstrecke mehrfach nutzen
+
+### Aufgabe 2
+
+*Welches sind die wesentlichen drei Schritte bei der Digitalisierung? Nenne diese.*
+
+1. Abtastung des Signals durch *Pulsamplitudenmodulation*
+2. Quantisierung auf diskrete Werte
+3. Codierung
+
+### Aufgabe 3
+
+*Erläutere den Grund für die nichtlineare Quantisierungskennlinie.*
+
+(Geringeres Quantisierungsrauschen pro Bit als bei linearer Quantisierung)
+
+Bei kleinen Spannungen würden sich größere Ungenauigkeiten ergeben als bei größeren Spannungen.
+
+### Aufgabe 4
+
+*Erkläre stichwortartig, wie die eindeutige Zuordnung der 8-Bit-Wörter zu den jeweiligen Kanälen ermöglicht wird.*
+
+feste, immer gleichbleibende zeitliche Zuordnung der 8-Bit-Wörter (Zeitschlitz) innerhalb eines pulsrahmens
+
+### Aufgabe 5
+
+*Erläutere stichwortartig den Aufgabe eines PCM-30 Pulsrahmens.*
+
+(Pulsrahmen legt den Aufbau der zu sendenden Daten fest.)
+
+* 32 Kanäle, davon 30 Kanäle für Datenübertragung
+* Kanal 16 beinhaltet Kennzeichen der 30 TN
+* Kanal 0 beinhaltet Meldewörter (Rahmentrennung, Synchronisation)
+* PCM-30-Pulsrahmen ist 125$\mu\text{s}$ lang, mit je 8 Bit; Einteilung der 125$\mu\text{s}$ in 32 Zeitschlitze
+
+----
+
+**02.10.2014**
+
+## Aufgaben
+
+### Aufgabe 1
+
+#### a)
+
+**Beschreibe die plesiochrone digitale Hierarchie und die synchrone digitale Hierarchie.**
+
+##### Plesiochrone digitale Hierarchie (PDH)
+
+* basiert auf dem PCM-Übertragungssystem
+* PDH weißt eine Multiplexstruktur auf, die auf Übertragungsraten mit ganzzahligen Vielfachen von 64 kbit/s aufbauen.
+* hierbei werden die Datenkanäle zu Pulsrahmen mit jeweils fest vorgegebenen Übertragungsraten zusammengefasst.
+
+##### Synchrone digitale Hierarchie (SDH)
+
+* Übertragung der Nutzdaten erfolgt zwischen den einzeönen Netzknoten **nicht** mehr in einer Rahmenstruktur mit fest vorgegebenener Anzahl von Kanälen, die jeweils eine konstante Bitrate aufweisen müssen, **sondern** in dem so genannten synchronen Transportmodulen (STM: Synchronous Transport Module). Unter einem Transportmodule versteht man einen Multiplexrahmen der SDH, in dem Nutzdaten von mehreren Kanälen, die auch unterschiedliche Datenrahmen aufweisen können, übertragen werden. *STM1* ist das kleinste Transportmodul.
+
+**Vorteil** SDH gegenüber PDH:
+
+Übertragungssysteme mit unterschiedlichen Übertragungsraten können kombiniert werden. SDH ermöglicht den Zugriff auf Signale bestimmter Bandbreite innerhalb eines hochkanäligen Systems ohne die gesamte Multiplexstruktur durchlaufen zu müssen.
+
+#### b)
+
+**Welche der beiden Standards ist zu bevorzugen? Begründe deine Antwort.**
+
+SDH (siehe a)
+
+### Aufgabe 2
+
+#### a)
+
+**Erkläre das Prinzip des asynchronen Transfer-Modus. Wie funktioniert die Übertragung? Was passiert, wenn von den Teilnehmern zu viele bzw. zu wenig Zellen angeliefert werden?**
+
+Beim ATM werden - ähnlich wie beim *Packet Transfer Mode* (PTM) - "Packete" übertragen. Diese Packete haben jedoch eine konstante Länge.
+
+#### b)
+
+**Was versteht man bei einem ATM-Netz unter dem flexiblen Bandbreitenmanagement?**
+
+#### Zusatz
+
+##### Synchronous Transfer Mode (STM)
+
+Beim STM werden Daten in festern Zeitschlitzen mit einer bestimmten Bandbreite übertragen. Zwischen Endgeräten ist - unabhängig vom Bedarf dieser - immmer eine feste Bandbreite verfügbar.
