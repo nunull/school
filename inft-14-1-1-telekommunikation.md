@@ -285,6 +285,14 @@ Beim ATM werden - ähnlich wie beim *Packet Transfer Mode* (PTM) - "Packete" üb
 
 **Was versteht man bei einem ATM-Netz unter dem flexiblen Bandbreitenmanagement?**
 
+ATM stellt einer Anwendung oder einem Dienst lediglich die tatsächlich erforderliche Übertragungskapazität zur Verfügung. Dies bezeichnet man als flexibles Bandbreitenmanagment.
+
+#### c)
+
+**Welcher Vorgang ist bei ATM asynchron?**
+
+Zellen werden *asynchron* zum Netztakt erzeugt und bedarfsorientiert übertragen.
+
 #### Zusatz
 
 ##### Synchronous Transfer Mode (STM)
